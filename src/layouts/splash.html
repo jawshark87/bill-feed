@@ -8,22 +8,22 @@
     <meta name="description" content="">
     <meta name="author" content="John Wilson">
     <!-- Icon courtesy of http://mostfamousperson.net/BillGates.png -->
-    <link rel="icon" href="assets/bill-gates.png">
+    <link rel="icon" href="../assets/bill-gates.png">
 
-    <title>BillFeed</title>
+    <title>BillFeed | Home</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
 
     <!-- Custom styles for this template -->
-    <link href="assets/splash.css" rel="stylesheet">
+    <link href="../assets/splash.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <!-- <script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -33,7 +33,9 @@
   </head>
 
   <body>
-
+  <!-- Google Authorization -->
+    <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+    <!-- <meta name="google-signin-client_id" content="237271176068-v18kklvd50b1b043b3aui7iaahvhfstr.apps.googleusercontent.com"> -->
 	<!-- Header -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -48,9 +50,17 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <!-- <li class="active"><a href="#">Home</a></li> -->
+            <!-- <li><a href="#">Sign out</a></li> -->
+            <!-- <script>
+              function signOut() {
+                var auth2 = gapi.auth2.getAuthInstance();
+                auth2.signOut().then(function () {
+                  console.log('User signed out.');
+                });
+              }
+            </script> -->
+            <!-- <li><a href="#contact">Contact</a></li> -->
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -58,14 +68,15 @@
 
     <!-- Main body text -->
     <div class="container">
-
       <div class="starter-template">
         <h1>Welcome to BillFeed</h1>
         <p class="lead">Create a page for your non-profit or activist group.<br>Search for bills you like (or don't), add them to your page, and annotate them using Genius.</p>
         <p><a class="btn btn-primary btn-lg" href="#" role="button">Create a page &raquo;</a></p>
       </div>
-
     </div><!-- /.container -->
+
+    <!-- Google sign-in button -->
+    <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
 
     <!-- Footer -->
     <footer class="footer">

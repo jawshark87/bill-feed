@@ -1,0 +1,40 @@
+DAGS: DIRECTED ACYCLIC GRAPHS
+- Breaking down the terminology:
+	- Graph: Nodes conencted by links (vertices connected by edges)
+	- Directed: Linked between Nodes have a direction (arrow head)
+	- Acyclic: No cycles, can't go in circles
+- Must ensure that project meets these requirements (e.g. throw exception when cycle is formed)
+
+HW3 AND DAGS
+- DAG.java is an independent class, doesn't know anything about Cell or Spreadsheet
+- Create an empty DAG and start adding upstream links to it with add(id,links)
+- Keeps track of upstream links and downstream links
+- Useful in spreadsheet context
+- Don't use static variables. Don't.
+
+INSERTION: SIMILAR TO FIND(X)
+- Define recursive insert:
+	[java]
+		class BinarySearchTree<T> {
+			Node<T> root=null; int size=0;
+			public void insert(T x) {
+				root = insert(x, root);
+			}
+			private static Node<T> insert(T x, Node<T> t){
+				if (t == null) {
+					return new Node<T>(x, null, null);
+				}
+				if (x.compareTo(t.data) < 0) {
+					t.left = insert(x, t.left);
+					return t;
+				}
+				else if (x.compareTo(t.data) > 0) {
+					t.right = insert(x, t.right);
+					return t;
+				}
+				else {
+					throw new RuntimeException("Can't add duplicates!");
+				}
+			}
+		}
+	[end]
